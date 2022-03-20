@@ -11,3 +11,5 @@ To use the application, follow these steps:
 https://github.com/AJShea86/shea-e-commerce
 
 https://www.youtube.com/watch?v=2yFnRzVtwrs
+
+![e-commerce-screenshot](https://user-images.githubusercontent.com/97988155/159145316-e812b0a7-e2c5-4907-8de8-316c47c53ef8.png)
