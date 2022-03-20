@@ -34,7 +34,6 @@ router.get("/:id", async (req, res) => {
 
   try {
     const singleProduct = await Product.findOne({
-      
       where: { id: req.params.id },
       include: [
         {
@@ -139,8 +138,6 @@ router.delete("/:id", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-
-  
 });
 
 module.exports = router;
