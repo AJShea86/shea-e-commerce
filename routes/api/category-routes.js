@@ -16,7 +16,7 @@ router.get("/:id", (req, res) => {
   // be sure to include its associated Products
   Category.findOne({ include: Product, where: { id: req.params.id } })
     .then((category) => {
-      console.log(category);
+      // console.log(category);
       if (!category) {
         res.status(404).end();
       } else {
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
   // create a new category
   try {
     const newCategory = await Category.create(req.body);
-    console.log(newCategory);
+    // console.log(newCategory);
     res.status(200).json(newCategory);
   } catch (error) {
     console.log(error);
@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   // update a category by its `id` value
   try {
-    console.log(req.params);
+    // console.log(req.params);
     const updatedCategory = await Category.findOne({ where: req.params });
 
     await updatedCategory.update({ category_name: req.body.category_name });
@@ -53,7 +53,7 @@ router.put("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   // delete a category by its `id` value
   try {
-    console.log(req.params);
+    // console.log(req.params);
     const deletedCategory = await Category.findOne({ where: req.params });
 
     await deletedCategory.destroy();
